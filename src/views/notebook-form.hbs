@@ -1,0 +1,26 @@
+{{> navbar}}
+<div class="container mt-3">
+  <h1>
+    {{#if id}}
+      Actualizando el PC "{{name_computer}}" ({{id}})
+    {{else}}
+      Crear un nuevo PC
+    {{/if}}
+  </h1>
+ 
+  <form action="/notebooks/{{#if id}}{{id}}/update{{else}}create{{/if}}" method="POST">
+    <div class="mb-3">
+      <label for="name_computer" class="form-label">Nombre del Notebook</label>
+      <input type="text" class="form-control" name="name_computer" aria-describedby="titleHelp" required="true" value="{{name_computer}}">
+      
+    </div>
+    <div class="mb-3">
+      <label for="mark" class="form-label">Ingresa la marca</label>
+      <input type="text" class="form-control" name="mark" aria-describedby="titleHelp" value="{{mark}}">
+      
+    </div>
+    <div class="mb-3">
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </div>
+  </form>
+</div>

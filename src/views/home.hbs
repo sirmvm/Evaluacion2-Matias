@@ -1,0 +1,21 @@
+{{> navbar}}
+<div class="container mt-3">
+  <header class="my-5">
+    <h1>Bienvenido al Emporium de PC</h1>
+    <p>
+      Templo sagrado de esta elemental maquina
+    </p>
+    
+  </header>
+  <hr>
+  <h3 class="mt-5 mb-3">Últimos PCs</h3>
+  {{#each notebooks}}
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name_computer}}</h5>
+        <p class="card-text">{{this.mark}}</p>
+        <a href="/notebooks/{{this.id}}" class="btn btn-primary btn-sm">Leer más</a>
+      </div>
+    </div>
+  {{/each}}
+</div>

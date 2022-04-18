@@ -1,0 +1,14 @@
+{{> navbar}}
+<div class="container mt-3">
+  <h1>{{name_computer}}</h1>
+  <p>{{mark}}</p>
+  <div class="mt-3 d-flex gap-2">
+    <a href="/notebooks/{{id}}/update">
+      <button class="btn btn-primary btn-sm">Editar</button>
+    </a>
+    <form action="/notebooks/{{id}}/delete" method="POST">
+      <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+    </form>
+  </div>
+  {{> backhome}}
+</div>
